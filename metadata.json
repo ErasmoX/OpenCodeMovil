@@ -1,0 +1,6 @@
+{
+  "name": "OpenCodeMovil",
+  "description": "Tu entorno de IA y desarrollo móvil, impulsado por código abierto. Conexión con motor local Termux (127.0.0.1:3001) y modelos OpenRouter.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
