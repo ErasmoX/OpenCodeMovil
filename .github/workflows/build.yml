@@ -19,11 +19,18 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Instalar Gradle Wrapper si no existe
+      - name: Configurar Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Configurar Gradle Oficial
+        uses: gradle/actions/setup-gradle@v3
+        with:
+          gradle-version: '8.7'
+
+      - name: Generar Wrapper si falta
         run: |
           if [ ! -f "gradlew" ]; then
-            sudo apt-get update && sudo apt-get install -y gradle
-            gradle wrapper
+            gradle wrapper --gradle-version 8.7
           fi
           chmod +x gradlew
 
