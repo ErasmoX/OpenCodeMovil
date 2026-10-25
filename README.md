@@ -74,11 +74,18 @@ Puedes desplegar OpenCodeMovil mediante dos vías complementarias:
 
 ### Método 1: Instalación de la App Nativa (APK)
 
-1. Descarga el paquete `.apk` oficial de **OpenCodeMovil**1. Descarga el paquete **.apk** oficial de **OpenCodeMovil**:
+1. **Descarga el instalador oficial:**
+   
+   <p align="left">
+     <a href="https://github.com/ErasmoX/OpenCodeMovil/releases/latest/download/OpenCodeMovil.apk">
+       <img src="https://img.shields.io/badge/Descargar-OpenCodeMovil.apk-00C853?style=for-the-badge&logo=android&logoColor=white" alt="Descargar OpenCodeMovil APK" />
+     </a>
+   </p>
 
-   [![Descargar APK](https://img.shields.io/badge/Descargar-OpenCodeMovil.apk-success?style=for-the-badge&logo=android)](https://github.com/ErasmoX/OpenCodeMovil/releases/latest/download/OpenCodeMovil.apk) desde la sección de *Releases* del repositorio o expórtalo desde el menú de compilación.
-2. Abre el archivo en tu dispositivo Android y confirma la instalación (habilita la opción de instalar aplicaciones de orígenes desconocidos si el sistema lo solicita).
-3. Al iniciar la aplicación, el **Asistente de Configuración** te guiará para vincular el backend local.
+   *(También disponible desde la sección de [Releases](https://github.com/ErasmoX/OpenCodeMovil/releases) del repositorio).*
+
+2. **Instala la aplicación:** Abre el archivo descargado en tu dispositivo Android y confirma la instalación (activa la opción de permitir la instalación desde orígenes desconocidos si el sistema lo solicita).
+3. **Inicia la configuración inicial:** Al abrir la app, el **Asistente de Configuración** te guiará paso a paso para vincular el motor local.
 
 ---
 
