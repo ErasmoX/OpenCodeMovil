@@ -74,7 +74,9 @@ Puedes desplegar OpenCodeMovil mediante dos vías complementarias:
 
 ### Método 1: Instalación de la App Nativa (APK)
 
-1. Descarga el paquete `.apk` oficial de **OpenCodeMovil** desde la sección de *Releases* del repositorio o expórtalo desde el menú de compilación.
+1. Descarga el paquete `.apk` oficial de **OpenCodeMovil**1. Descarga el paquete **.apk** oficial de **OpenCodeMovil**:
+
+   [![Descargar APK](https://img.shields.io/badge/Descargar-OpenCodeMovil.apk-success?style=for-the-badge&logo=android)](https://github.com/ErasmoX/OpenCodeMovil/releases/latest/download/OpenCodeMovil.apk) desde la sección de *Releases* del repositorio o expórtalo desde el menú de compilación.
 2. Abre el archivo en tu dispositivo Android y confirma la instalación (habilita la opción de instalar aplicaciones de orígenes desconocidos si el sistema lo solicita).
 3. Al iniciar la aplicación, el **Asistente de Configuración** te guiará para vincular el backend local.
 
