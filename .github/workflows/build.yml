@@ -1,9 +1,12 @@
-name: Compilar APK OpenCodeMovil
+name: Compilar y Publicar APK OpenCodeMovil
 
 on:
   push:
     branches: [ "main" ]
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   build:
@@ -38,8 +41,26 @@ jobs:
       - name: Compilar APK en modo Debug
         run: ./gradlew assembleDebug --stacktrace --no-daemon
 
-      - name: Subir APK como artefacto descargable
+      - name: Renombrar archivo APK para release
+        run: |
+          mkdir -p release-apk
+          cp app/build/outputs/apk/debug/*.apk release-apk/OpenCodeMovil.apk
+
+      - name: Subir como Artifact temporal
         uses: actions/upload-artifact@v4
         with:
           name: OpenCodeMovil-v1.0-APK
-          path: app/build/outputs/apk/debug/*.apk
+          path: release-apk/OpenCodeMovil.apk
+
+      - name: Publicar Release oficial en GitHub
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v1.0.0
+          name: "OpenCodeMovil v1.0.0"
+          body: |
+            ### 📱 Instalador directo de OpenCodeMovil
+            - Compilación automática generada con éxito.
+            - Descarga el archivo `OpenCodeMovil.apk` directamente en tu teléfono Android para instalarlo.
+          files: release-apk/OpenCodeMovil.apk
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
