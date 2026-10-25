@@ -18,13 +18,17 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
-          cache: 'gradle'
 
-      - name: Dar permisos de ejecución a Gradle
-        run: chmod +x gradlew
+      - name: Instalar Gradle Wrapper si no existe
+        run: |
+          if [ ! -f "gradlew" ]; then
+            sudo apt-get update && sudo apt-get install -y gradle
+            gradle wrapper
+          fi
+          chmod +x gradlew
 
       - name: Compilar APK en modo Debug
-        run: ./gradlew assembleDebug --stacktrace
+        run: ./gradlew assembleDebug --stacktrace --no-daemon
 
       - name: Subir APK como artefacto descargable
         uses: actions/upload-artifact@v4
